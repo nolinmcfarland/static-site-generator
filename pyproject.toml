@@ -1,0 +1,17 @@
+[project]
+name = "static-site-generator"
+version = "0.1.0"
+description = "Generate static sites from Markdown files"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = []
+
+[tool.pyright]
+reportImplicitOverride = "none"
+reportMissingParameterType = "none"
+reportOptionalMemberAccess = "none"
+reportUnannotatedClassAttribute = "none"
+reportUnknownArgumentType = "none"
+reportUnknownParameterType = "none"
+reportUnknownMemberType = "none"
+reportUnknownVariableType = "none"
