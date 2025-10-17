@@ -49,3 +49,6 @@ class TestParentNode(unittest.TestCase):
             '<div id="some-id"><p class="some-class">Classed paragraph</p></div>'
         )
 
+
+if __name__ == "__main__":
+    _ = unittest.main()
