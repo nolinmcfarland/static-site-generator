@@ -146,7 +146,6 @@ class TestSplitNodes(unittest.TestCase):
             TextNode("This has a link ", TextType.PLAIN),
             TextNode("click me", TextType.LINK, "https://example.com"),
         ]
-        for n in new_nodes: print(n)
         self.assertEqual(new_nodes, expected_nodes)
 
     def test_split_nodes_link_no_matches(self):
@@ -154,3 +153,7 @@ class TestSplitNodes(unittest.TestCase):
         new_nodes = split_nodes_link([node])
         expected_nodes = [node]
         self.assertEqual(new_nodes, expected_nodes)
+
+
+if __name__ == "__main__":
+    _ = unittest.main()
