@@ -55,13 +55,12 @@ the **same** even with inline stuff
 
     def test_quote(self):
         markdown = """
->This is a
->block quote.
+> "I am in fact a Hobbit in all but size."
         """
         node = markdown_to_html_node(markdown)
         self.assertEqual(
             node.to_html(),
-            "<div><blockquote>This is a block quote.</blockquote></div>"
+            "<div><blockquote>\"I am in fact a Hobbit in all but size.\"</blockquote></div>"
         )
 
     def test_unordered_list(self):

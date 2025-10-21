@@ -67,7 +67,7 @@ def __code_to_html_node(block):
 def __quote_to_html_node(block):
     lines = list(
         map(
-            lambda line: line[1:],
+            lambda line: line[2:],
             block.split("\n")
         )
     )

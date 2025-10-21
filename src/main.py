@@ -1,16 +1,24 @@
 import os
 import shutil
+from generate_page import generate_pages
 
 
 def main():
-    source = "./static"
-    destination = "./public"
-    if not os.path.exists(source):
-        raise Exception(f"source does not exist at {source}")
-    if os.path.exists(destination):
-        print(f"Removing directory {destination}")
-        remove_path(destination)
-    copy_path(source, destination)
+    template = "./template.html"
+    static = "./static"
+    content = "./content"
+    public = "./public"
+
+    if not os.path.exists(static):
+        raise Exception(f"source does not exist at {static}")
+
+    if os.path.exists(public):
+        print(f"Removing directory {public}")
+        remove_path(public)
+
+    copy_path(static, public)
+    generate_pages(content, template, public)
+
 
 
 def remove_path(path):

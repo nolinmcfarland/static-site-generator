@@ -24,12 +24,12 @@ class TestBlockType(unittest.TestCase):
         self.assertEqual(block_type, BlockType.PARAGRAPH)
 
     def test_block_to_block_type_quote(self):
-        block = ">Some\n>text"
+        block = "> Some\n> text"
         block_type = block_to_block_type(block)
         self.assertEqual(block_type, BlockType.QUOTE)
 
     def test_block_to_block_type_quote_newlines_missing_indent(self):
-        block = ">Some\ntext"
+        block = "> Some\n text"
         block_type = block_to_block_type(block)
         self.assertEqual(block_type, BlockType.PARAGRAPH)
 
